@@ -1,0 +1,307 @@
+/*
+Google fonts
+*p*font-family: 'Lato', sans-serif;
+*h*font-family: 'RocknRoll One', sans-serif;
+*/
+:root{
+    --fontbody:'Lato', sans-serif;
+    --fonthead:'RocknRoll One', sans-serif;
+    --bg-color:linear-gradient(to left,black 50%, #a42405);
+}
+html{scroll-behavior: smooth;}
+h1 , h5{
+    text-align: center;
+    font-family: var(--fonthead);
+}
+p{
+    text-align: justify;
+    font-family: var(--fontbody);
+}
+.hr {
+    width: 40%;
+    height: 2px;
+    margin: 20px auto;
+    background: linear-gradient(to right, #111, #DA3544 5%, #111);
+}
+@media (max-width: 576px) {
+    .hr {
+        width: 150px;
+        height: 5px;
+        margin: 20px auto;
+        background: linear-gradient(to right,#DA3544 5%, #111);
+    }
+}
+/**/
+.upBtn{
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    z-index: 1000000;
+    transition: all 500ms;
+}.upBtn:hover{
+     border-radius: 50%;
+    transition: all 500ms;
+ }
+
+/*navbar*/
+.navbar{
+    background: linear-gradient(to left,black 85%, #a42405);
+    color: white;
+}
+.navbar a img{
+    width: 100px;
+    cursor: default;
+}
+.navbar ul li a{
+    transition: all 500ms;
+}
+.navbar ul li a:hover{
+    border: 2px solid rgba(164, 13,5,0.5);
+    border-radius: 10px;
+    background-color: rgba(164, 13,5,0.5);
+    transition: background-color 500ms;
+}
+@media (max-width: 576px) {
+    .navbar{
+        background:linear-gradient(to left,black 55%, #a42405);
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar{
+        background:linear-gradient(to left,black 70%, #a42405);
+    }
+}
+/*end navbar*/
+/*img slider*/
+.slide{
+    margin-top:60px;
+}
+.slide ol .active{
+    background-color: #8d1515;
+}
+.slide ol li{
+    border-radius: 50%;
+    height: 20px;
+}
+.slide .carouselControl .fas{
+    font-size: 50px;
+    color: #8d1515;
+}
+.slide .carouselControl:hover{
+    background-color: RGBA(141,21,21,0.32);
+
+}
+@media (max-width: 576px) {
+    .slide{
+        margin-top:79px;
+    }
+    .slide ol li{
+        border-radius: 0;
+        height: 0;
+    }
+    .slide .carouselControl .fas{
+        font-size: 30px;
+    }
+    .slide .carouselControl:hover{
+        background-color: RGBA(141,21,21,0);
+    }
+}
+/*end img slider*/
+/*aboutUs*/
+#aboutUs{
+    background:var(--bg-color);
+    color: white;
+}
+.aboutUsBody .row img{
+    width: 100%;
+}
+@media (max-width: 576px) {
+    #aboutUs{
+        background: linear-gradient(to top left,black 50%, #a42405);
+    }
+    .aboutUsBody .row img{
+        width: 60%;
+        margin-left: 70px;
+    }
+}
+@media (max-width: 900px) {
+    #aboutUs{
+        background: linear-gradient(to top left,black 50%, #a42405);
+    }
+    .aboutUsBody .row img{
+        width: 60%;
+        margin-left: 122px;
+    }
+}
+/*end aboutUs*/
+/*ourProducts*/
+#ourProducts{
+    background: var(--bg-color);
+    color: white;
+}
+.ourProductsBody .card{
+    background: linear-gradient(to top left,black 50%, #a42405);
+    box-shadow: -4px -3px 5px #000000;
+    transition: all 500ms;
+
+}
+.ourProductsBody .card:hover{
+   /* transform: skewX(1deg);
+    transform: skewY(1deg);*/
+    transform: skew(-1deg,1deg);
+    transition: all 500ms;
+}
+.ourProductsBody .toMore{
+  margin: 2px 0;
+}
+@media (max-width: 576px) {
+    .ourProductsBody .card{
+     margin: 5px auto ;
+    }
+    .ourProductsBody .toMore{
+        background-color: #DA3544;
+        color: white;
+    }
+}
+@media (max-width: 900px) {
+    .ourProductsBody .card{
+        margin: 5px auto;
+    }
+    .ourProductsBody .toMore{
+        background-color: #DA3544;
+        color: white;
+    }
+}
+/*end ourProducts*/
+/*ourGallery*/
+#ourGallery{
+    background:var(--bg-color);
+    color: white;
+}
+.ourGalleryBody .navHeader ul{
+    padding-left: 40%;
+    text-align: center;
+}
+.ourGalleryBody .navHeader ul li button{
+border-radius: 200px;
+}
+.ourGalleryBody .navHeader ul li .collapsed{
+    background-color: #DA3544;
+    color: white;
+ }
+.ourGalleryBody .navBody .card .card-body{
+    background:linear-gradient(to top left,black 75%, #a42405);
+}
+.navBody .card .card-body .container .row img{
+    border: 1px solid white;
+    border-radius: 50px;
+}
+@media (max-width: 576px) {
+    .ourGalleryBody .navHeader ul {
+        margin: 0;
+        padding-left: 10px;
+    }
+}
+@media (max-width: 900px) {
+    .ourGalleryBody .navHeader ul {
+        margin: 0;
+
+    }
+    .ourGalleryBody .navHeader li{
+        width: 33.33%;
+
+    }
+    .ourGalleryBody .navHeader button{
+        font-size: 15px;
+    }
+}
+/*end ourGallery*/
+#contactUs{
+    background: var(--bg-color);
+    color: white;
+}
+.contactUsBody .container-fluid a img {
+    height: 600px;
+}
+@media (max-width: 576px) {
+    .contactUsBody .container-fluid{
+        text-align: center;
+    }
+    .contactUsBody .container-fluid .form-group textarea {
+        width: 100%;
+    }
+    .contactUsBody .container-fluid a img {
+        height: 300px;
+        margin-bottom: 5px;
+    }
+}
+@media (max-width: 900px) {
+    .contactUsBody .container-fluid{
+        text-align: center;
+    }
+    .contactUsBody .container-fluid .form-group textarea {
+        width: 100%;
+    }
+    .contactUsBody .container-fluid a img {
+        height: 300px;
+        margin-bottom: 5px;
+    }
+}
+/*footer*/
+.site-footer{
+    border: 2px solid white;
+    border-radius: 3px;
+    background:linear-gradient(to top left,black 75%, #a42405);
+    color: white;
+}
+.site-footer .container .row ul{
+    padding-bottom: 3px;
+    text-align: center;
+    list-style: none;
+}
+.site-footer .container .row ul li a{
+    color: #c6c6c6;
+}
+.site-footer .container .row ul li a:hover{
+    border: 2px solid rgba(164, 13,5,0.5);
+    border-radius: 10px;
+    background-color: rgba(164, 13,5,0.5);
+    text-decoration: none;
+    transition: background-color 500ms;
+}
+.site-footer hr
+{
+    border-top-color:#bbb;
+    opacity:0.5
+}
+.site-footer .socLink{
+    text-align: center;
+}
+.site-footer .socLink a{
+    transition: all 500ms;
+}
+.site-footer .socLink a:hover{
+    background-color: #111111;
+    border-radius: 50%;
+    transition: all 500ms;
+}
+.site-footer .socLink .facebook:hover{
+    background-color: #233e64;
+}
+.site-footer .socLink .Twitter:hover{
+    background-color: #1e79e9;
+}
+.site-footer .socLink .Google:hover{
+    background-color: #f11e3b;
+}
+.site-footer .socLink .Instagram:hover{
+    background:linear-gradient(to top left, #c100ff, #e283dd);
+
+}
+.site-footer .socLink .Linkedin:hover{
+    background-color: #071ff3;
+}
+.site-footer .socLink .Github:hover{
+    background-color: white;
+}
